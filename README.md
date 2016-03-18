@@ -1,5 +1,6 @@
 # phalcon-cloud
-DUT Evaluation
+DUT Evaluation 
+Baptiste Jenouvrier
 
 A Phalcon and Phalcon-jQuery web application
 #Howto

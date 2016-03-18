@@ -91,6 +91,7 @@ class DirectoryUtils {
 		}
 		return $histo;
 	}
+	
 	/**
 	 * Met à jour l'historique de tous les disques
 	 * @param array $cloud Configuration du Cloud, accès par $this->config->cloud dans un contrôleur
@@ -145,5 +146,10 @@ class DirectoryUtils {
 			$result=false;
 		}
 		return $result;
+	}
+	public static function disqueDateMax($cloud, $disque){
+		$disqueTarif = DisqueTarif::query()->where("idDisque=".$disque->getID)
+			->andWhere("DATE('date') <= CURDATE()");
+		
 	}
 }
